@@ -1,0 +1,25 @@
+.ButtonSpreedStore{
+    background-color: #21262d;
+    border: none;
+    color: white;
+    padding: 1vh;
+    border-radius: 6px;
+    transition: transform .1s;
+}
+.ButtonSpreedStore:hover{
+    background-color: #4b535b;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.ButtonSpreedStore:active{
+    background-color: #37954d;
+}
+.Menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.BalanceCount{
+    
+    font-size: 15px;
+}

@@ -1,0 +1,36 @@
+.PetWindow{
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.petts{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #303841 ;
+    width: 4vh;
+    height: 4vh;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    transition: transform .1s;
+}
+.Close:hover{
+    cursor: pointer;
+    background-color: #b2bdc8;
+    transform: scale(1.05);
+}
+.CloseAvatar{
+    width: 4vh;
+    height: 4vh;
+}

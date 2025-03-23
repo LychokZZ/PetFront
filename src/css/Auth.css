@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
+
+.CentralWindow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.LoginWindow{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #303841;
+    width: 40vw;
+    height: 50vh;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(74, 73, 73, 0.5);
+}
+.LoginResponse{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    width: 100vw;
+}
+.Input{
+    padding: 20px;
+    width: 20vw;
+    margin: 10px;
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
+}
+.StylePetLogin{
+    width: 20vw;
+}
+.ButReg{
+    background-color: #21252a;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 20vw;
+    font-size: 20px;
+    border-radius: 15px;
+    margin: 20px;
+    transition: transform .1s;
+}
+.ButReg:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: #51575f;
+}
+.Floors{
+    display: flex;
+    background: linear-gradient(0deg, rgb(150, 160, 170), rgb(222, 229, 236), rgb(222, 229, 236));
+
+    width: 35vw;
+    height: 55vh;
+    margin: -10px 0px -300px 0px;
+    border-radius: 300vh 300vh 0vh 0vh;
+}
+.PetAndFloor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: Waiting 8s linear infinite;
+}
+.MyPet{
+    font-family: "Oi", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(219, 229, 237);
+    font-size: 50px;
+    position: absolute;
+    margin: 0vh 30vw;
+    background-color: #303841;
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: 5px 5px 15px rgba(74, 73, 73, 0.5);
+}
+.ToSwith{
+    position: absolute;
+    background-color: #e6ebf0;
+    border: none;
+    margin: -6vw 13vw;
+    width: 8vw;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform .1s;
+}
+.ToSwithReg{
+    position: absolute;
+    background-color: #e6ebf0;
+    border: none;
+    margin: -6vw 14.3vw;
+    width: 8vw;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform .1s;
+}
+.ToSwithReg:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: #ffffff;
+
+}
+.ToSwith:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: #ffffff;
+
+}
+.HederLogin{
+    color: white;
+}
+.Up{
+    animation: Up 1s linear;
+}
+@keyframes Up {
+    0% {
+        transform: translateY(0px);
+    }
+    20% {
+        transform: translateY(-20px);
+    }
+    40% {
+        transform: translateY(0px);
+    }
+    60% {
+        transform: translateY(-30px);
+    }
+    80% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+.background{
+    position:absolute;
+    background-color: #f0e9ee;
+    width: 100vh;
+    height: 100vh;
+    border-radius: 100vw;
+    margin-top: 50vh;
+    margin-left: -50vh;
+    z-index: -1;
+}
+.backgroundTwo{
+    position:absolute;
+    background-color: #e9ecf0;
+    width: 100vh;
+    height: 100vh;
+    border-radius: 100vw;
+    margin-top: -70vh;
+    margin-left: 150vh;
+    z-index: -1;
+}
+@keyframes Waiting {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(30px);
+    }
+    50% {
+        transform: translateY(00px);
+    }
+    75% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+@keyframes Waiting2 {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(00px);
+    }
+    75% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 600px) {
+    .CentralWindow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+    .LoginWindow{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background-color: #303841;
+        width: 80vw;
+        height: 35vh;
+        margin-top: -20vh;
+        border-radius: 20px;
+        box-shadow: 5px 5px 15px rgba(74, 73, 73, 0.5);
+    }
+    .LoginResponse{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
+    .Input{
+        padding: 15px;
+        width: 50vw;
+        margin: 10px;
+        border-radius: 15px;
+        border: none;
+        font-size: 20px;
+    }
+    .StylePetLogin{
+        width: 30vw;
+    }
+    .ButReg{
+        background-color: #21252a;
+        color: white;
+        padding: 10px;
+        border: none;
+        width: 50vw;
+        font-size: 20px;
+        border-radius: 15px;
+        margin: 20px;
+        transition: transform .1s;
+    }
+    .ButReg:hover{
+        cursor: pointer;
+        transform: scale(1.05);
+        background-color: #51575f;
+    }
+    .Floors{
+        display: flex;
+        background: rgb(222, 229, 236);
+        width: 65vw;
+        height: 35vh;
+        margin: -10px 0px -100vh 0px;
+        border-radius: 300vh 300vh 0vh 0vh;
+    }
+    .PetAndFloor{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation: Waiting2 8s linear infinite;
+    }
+    .MyPet{
+        font-family: "Oi", serif;
+        font-weight: 400;
+        font-style: normal;
+        color: rgb(219, 229, 237);
+        font-size: 40px;
+        position: absolute;
+        margin: 0vh 20vw;
+        background-color: #303841;
+        width: 60vw;
+        display: flex;
+        justify-content: center;
+        border-radius: 0px 0px 15px 15px;
+        box-shadow: 5px 5px 15px rgba(74, 73, 73, 0.5);
+    }
+    .ToSwith{
+        position: absolute;
+        background-color: #dce1e6;
+        border: none;
+        margin: -23vw 21vw;
+        width: 30vw;
+        padding: 10px;
+        border-radius: 10px;
+        transition: transform .1s;
+    }
+    .ToSwithReg{
+        position: absolute;
+        background-color: #dce1e6;
+        border: none;
+        margin: -23vw 26vw;
+        width: 30vw;
+        padding: 10px;
+        border-radius: 10px;
+        transition: transform .1s;
+    }
+    .background{
+        position:absolute;
+        background-color: #f0e9ee;
+        width: 100vh;
+        height: 100vh;
+        border-radius: 100vw;
+        margin-top: 60vh;
+        margin-left: -80vh;
+        z-index: -1;
+    }
+    .backgroundTwo{
+        position:absolute;
+        background-color: #e9ecf0;
+        width: 100vh;
+        height: 100vh;
+        border-radius: 100vw;
+        margin-top: -80vh;
+        margin-left: 10vh;
+        z-index: -1;
+    }
+}
