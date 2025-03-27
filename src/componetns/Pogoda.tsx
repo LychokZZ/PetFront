@@ -143,7 +143,6 @@ const ChooseWeather = () => {
     }else if( DataWeather.temp_c >14 && DataWeather.cloud > 50 && DataWeather.wind_kph <= 12 && hour >= 7 && hour <= 17){
         setWeather(SunnNot());
     }else setWeather(Sunny());
-    console.log(Weather)
 }
 
 
@@ -199,7 +198,6 @@ useEffect(() => {
         console.error("Помилка при отриманні погоди:", error);
       }
     };
-console.log(DataWeather)
 
     fetchWeather();
   }, [city]);
