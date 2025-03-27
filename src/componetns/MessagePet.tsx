@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../css/Message.css"
 interface PetHub {
     eat: number;
@@ -15,7 +15,8 @@ interface Message {
 }
 
 const MessagePet: React.FC<{ petHub: PetHub }> = ({ petHub }) => {
-    const [Message , setMessage] = useState<Message>({
+    const [VueMes, setVueMes] = useState<string | undefined>('')
+    const [Message ] = useState<Message>({
         Food: ["Я проголодався" , "ХОЧУ ЇСТИ!!","Нагодуй мене)","Я хочу Салат)","Знайди щось їсти!"],
         Sleep: ["Я хочу спати" , "Вклади мене спати)","Скажи вже на добраніч"],
         Play: ["Давай пограємо!","Мені скучно ,давай в гру!", "Давай поклікаєм", "Пішли повеселимся!"],
@@ -37,11 +38,15 @@ const MessagePet: React.FC<{ petHub: PetHub }> = ({ petHub }) => {
             return Message.Health[RandomNumber]
         }
     }
+    useEffect(()=>{
+        const Messs: string | undefined = Problems()
+        setVueMes(Messs)
+    },[petHub])
     return (
         <div>
             {Problems() !== undefined || null ? 
             <div className="Messages">
-                {Problems()}
+                {VueMes}
             </div> 
             :
             <div></div>

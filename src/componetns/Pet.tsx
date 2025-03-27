@@ -12,7 +12,7 @@ const Pet: React.FC<Pingwin> =({Play, Sleep, Status}) =>{
         <div>
             <div>
                 
-                <img className='StylePet' src={Status ? Sleep  : Play} alt="Miha" />
+                <img className='StylePet' src={Status ? Sleep  : Play} alt="Pinguine" />
             </div>
         </div>
     )

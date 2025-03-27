@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import '../css/PetGame.css'
 import '../css/Background.css'
+import '../css/Pogoda.css'
 import HudBar from './HudBar';
 import Pet from './Pet';
 import Action from './Action';
@@ -11,6 +12,7 @@ import Store from './Actions/Store';
 import Game from './Actions/Game';
 import MessagePet from './MessagePet';
 import Settings from './Actions/Settings';
+import Pogoda from './Pogoda';
 
 interface PetHub {
     eat: number;
@@ -18,6 +20,7 @@ interface PetHub {
     play: number;
     health: number;
     store: number;
+    lvl: number;
 }
 interface ManageProduct {
     name : string;
@@ -46,8 +49,8 @@ const PetGame = () =>{
     const [Emotion, setEmotion] = useState('')
     const [Status , setStatus] = useState(false)
     const [Ping,setPing] = useState<Pinguine>({
-        Play: '/Animals/pngwing.png',
-        Sleep: '/Animals/sleepPing.png'
+        Play: 'Animals/pngwing.png',
+        Sleep: 'Animals/sleepPing.png'
     })
     const [Product, setProduct] = useState<Product>({
         rice: {name: "rice" , count: 0 , price: 25},
@@ -65,13 +68,14 @@ const PetGame = () =>{
         sleep: 100,
         play: 100,
         health: 100,
+        lvl: 100,
         store: 0,
     })
     
     useEffect(()=>{
         const getProduct = async () => {
             try {
-                const product = await fetch(`http://localhost:5001/auth/getProduct?username=${username}`, {
+                const product = await fetch(`https://petserver-h8xb.onrender.com/auth/getProduct?username=${username}`, {
                     method: "GET",
                     headers: { 'Content-Type': 'application/json' }
                 });
@@ -109,7 +113,7 @@ const PetGame = () =>{
     useEffect(()=>{
         const getStan = async () => {
             try {
-                const Stan = await fetch(`http://localhost:5001/auth/getStan?username=${username}`, {
+                const Stan = await fetch(`https://petserver-h8xb.onrender.com/auth/getStan?username=${username}`, {
                     method: "GET",
                     headers: { 'Content-Type': 'application/json' }
                 });
@@ -118,13 +122,26 @@ const PetGame = () =>{
                     throw new Error(`Ошибка: ${Stan.status} ${Stan.statusText}`);
                 }
                 const Stans = await Stan.json();
-                setPetHub({
-                    eat: Stans.Eat,
-                    sleep: Stans.Sleep,
-                    play: Stans.Play,
-                    health: Stans.Health,
-                    store: 0,}
-                )
+                if(Stans.LVL >= 100){
+                    setPetHub({
+                        eat: Stans.Eat,
+                        sleep: Stans.Sleep,
+                        play: Stans.Play,
+                        health: Stans.Health,
+                        lvl: Stans.LVL,
+                        store: 0,
+                    })
+                }else{
+                    setPetHub({
+                        eat: Stans.Eat,
+                        sleep: Stans.Sleep,
+                        play: Stans.Play,
+                        health: Stans.Health,
+                        lvl: 100,
+                        store: 0,
+                    })
+
+                }
                 return Stans;
             } catch (error) {
                 console.error("Ошибка при получении данных:", error);
@@ -148,9 +165,10 @@ const PetGame = () =>{
                 sleep: Math.max(prev.sleep - 2, 0),
                 play: Math.max(prev.play - 3, 0),
                 health: Math.max(prev.health - 1, 0),
+                lvl: prev.lvl,
                 store: 0,
             }));
-        }, (1000*30)); 
+        }, (1000*90)); 
     
         return () => clearInterval(interval); 
     }, []);
@@ -161,6 +179,10 @@ const PetGame = () =>{
             ...prev,
             [element]: Math.min(prev[element] + value, 100),
         }));
+        setPetHub((prev) => ({
+            ...prev,
+            lvl: prev.lvl + 2,
+        }));
     };
     const BalanceAdd = (element: keyof PetHub, value: number) => {
         setBalance((prev) => prev + value);
@@ -168,6 +190,11 @@ const PetGame = () =>{
             ...prev,
             [element]: Math.min(prev[element] + 1, 100),
         }));
+        setPetHub((prev) => ({
+            ...prev,
+            lvl: prev.lvl + 0.5,
+        }));
+
     }
     const setProductes = (element: keyof Product , price: number) => {
         setBalance((prev)=>prev - price)
@@ -218,21 +245,27 @@ const PetGame = () =>{
         <div className='petts'>
             <div className='Coolpac'></div>
             <div className='CoolpacTwo'></div>
+            <div className='Pogoda'> 
+                    <Pogoda />
+            </div>
             <div> {Menu} </div>
             <div className='PetWindow'>
-                <HudBar PetHud = {PetHub}/>
+            <HudBar PetHud = {PetHub}/> 
                 <div className='moon'></div>
                 <div className="PetAndMessage">
                     <div className={Emotion}>
                         <Pet Play = {Ping.Play} Sleep= {Ping.Sleep} Status={Status} />
                         {Status ? <div></div>: <MessagePet petHub = {PetHub}/> }
                     </div>
+                    
                     <div className='Floor'></div>
                 </div>    
+                
             </div>
             <div>
                 <Action setProps = {ChooseMenu}/>
             </div>
+            
         </div>
     )
 }

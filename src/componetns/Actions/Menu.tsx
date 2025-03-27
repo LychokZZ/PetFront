@@ -67,7 +67,7 @@ const Eating = (foodName: keyof Foods, eat:number ) =>{
     }
 }
 const setFetchProduct = async () => {
-    await fetch('http://localhost:5001/auth/Product', {
+    await fetch('https://petserver-h8xb.onrender.com/auth/Product', {
         method: 'POST',
         headers: {
             'Content-type' : 'application/json'

@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import "../css/HudBar.css"
-import { setInterval } from 'timers/promises';
 
 interface PetHud {
     eat: number;
     sleep: number;
     play: number;
     health: number;
+    lvl: number;
   }
 
 const Styler =(progress:number): React.CSSProperties => {
@@ -21,10 +21,10 @@ interface HudBarProps {
 }
 const HudBar: React.FC<HudBarProps> =({PetHud}) =>{
     const username = localStorage.getItem('PetName')
-
+    const [LVLs, setLvls] = useState('')
     const setFetchStan = async () => {
         if(PetHud.eat !== 100){
-            await fetch('http://localhost:5001/auth/setStan', {
+            await fetch('https://petserver-h8xb.onrender.com/auth/setStan', {
                 method: 'POST',
                 headers: {
                     'Content-type' : 'application/json'
@@ -34,7 +34,8 @@ const HudBar: React.FC<HudBarProps> =({PetHud}) =>{
                     Eat: PetHud.eat,
                     Sleep: PetHud.sleep,
                     Play: PetHud.play,
-                    Health: PetHud.health
+                    Health: PetHud.health,
+                    LVL : PetHud.lvl
                 })
             }) 
         }
@@ -42,9 +43,21 @@ const HudBar: React.FC<HudBarProps> =({PetHud}) =>{
     useEffect(()=>{
         setFetchStan()
     },[PetHud])
+
+    useEffect(()=>{
+        let l = PetHud.lvl.toString();
+        let word = l.split('')
+        if(word.length > 5){
+            setLvls(word[0] + word[1])
+        }else setLvls(word[0])
+    },[PetHud])
     return(
         <div>
             <div className='Hud'>
+            <div className='CentralAll'>
+                    <div>{LVLs}</div>
+                    Lvl
+                </div>
                 <div className='CentralAll'>
                     <div className='BlockHud'>
                         <div style={Styler(PetHud.eat)} ></div>

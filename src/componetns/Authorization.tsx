@@ -6,43 +6,68 @@ const Auth =() => {
     const [Vue ,setVue] = useState(true)
     const [username,setUsername] = useState('')
     const [password,setPassword] = useState('')
-    const Registrations = () => {
-        console.log(username,password)
-        fetch('http://localhost:5001/auth/registration', {
-            method: 'POST',
-            headers: {
-                'Content-type' : 'application/json'
-            },
-            body: JSON.stringify({
-                username: username,
-                password: password
-            })
-        })
-        localStorage.setItem("Authorization" , 'true')
-        localStorage.setItem("PetName" , username)
-        window.location.reload();
-    }
-    const Login = () => {
-        console.log(username,password)
-        fetch('http://localhost:5001/auth/registration', {
-            method: 'POST',
-            headers: {
-                'Content-type' : 'application/json'
-            },
-            body: JSON.stringify({
-                username: username,
-                password: password
-            })
-        })
-        localStorage.setItem("Authorization" , 'true')
-        localStorage.setItem("PetName" , username)
-        window.location.reload();
-    }
+    const Registrations = async () => {
+        try {
+            const response = await fetch('https://petserver-h8xb.onrender.com/auth/registration', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    username: username,
+                    password: password
+                })
+            });
+    
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.message || 'Ошибка регистрации');
+            }
+    
+            localStorage.setItem("Authorization", "true");
+            localStorage.setItem("PetName", username);
+    
+            window.location.reload();
+        } catch (error) {
+            console.error('Ошибка регистрации:', error);
+            alert(error || 'Не удалось зарегистрироваться. Попробуйте снова.');
+        }
+    };
+    
+    const Login = async () => {
+        try {
+            console.log(username, password);
+            
+            const response = await fetch('https://petserver-h8xb.onrender.com/auth/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    username: username,
+                    password: password
+                })
+            });
+    
+            if (!response.ok) {
+                const errorData = await response.json(); 
+                throw new Error(errorData.message || 'Ошибка авторизации');
+            }
+    
+            localStorage.setItem("Authorization", "true");
+            localStorage.setItem("PetName", username);
+            
+            window.location.reload();
+        } catch (error) {
+            console.error('Ошибка входа:', error);
+            alert(error || 'Не удалось зарегистрироваться. Попробуйте снова.');
+        }
+    };
+    
 
 
     useEffect(()=>{
         setUp('Up')
-        
     },[])
 
     
@@ -75,7 +100,7 @@ const Auth =() => {
                         </div>
                     }
                     <div className="PetAndFloor">
-                        <div className={Up}><img className='StylePetLogin' src={"Animals/pngwing.png"} alt="Miha" /></div>
+                        <div className={Up}><img className='StylePetLogin' src={"Animals/pngwing.png"} alt="Pinguine" /></div>
                         <div className="Floors"></div>
                     </div>
                 </div>
