@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/PetFront/static/css/main.7764e6a5.css",
-    "main.js": "/PetFront/static/js/main.9fbb86b4.js",
+    "main.css": "/PetFront/static/css/main.bea283af.css",
+    "main.js": "/PetFront/static/js/main.eb1a324a.js",
     "index.html": "/PetFront/index.html",
-    "main.7764e6a5.css.map": "/PetFront/static/css/main.7764e6a5.css.map",
-    "main.9fbb86b4.js.map": "/PetFront/static/js/main.9fbb86b4.js.map"
+    "main.bea283af.css.map": "/PetFront/static/css/main.bea283af.css.map",
+    "main.eb1a324a.js.map": "/PetFront/static/js/main.eb1a324a.js.map"
   },
   "entrypoints": [
-    "static/css/main.7764e6a5.css",
-    "static/js/main.9fbb86b4.js"
+    "static/css/main.bea283af.css",
+    "static/js/main.eb1a324a.js"
   ]
 }
