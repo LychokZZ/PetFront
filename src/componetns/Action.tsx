@@ -6,7 +6,7 @@ import { IoGameController } from "react-icons/io5";
 import { GiHealthNormal } from "react-icons/gi";
 import { FaStoreAlt } from "react-icons/fa";
 import { IoIosSettings } from "react-icons/io";
-
+import { MdStyle } from "react-icons/md";
 
 interface ActionProps {
     setProps: (element:string) => void;
@@ -22,6 +22,7 @@ const  Action: React.FC<ActionProps> = ({ setProps }) =>{
             <button className='BlockButtAction' onClick={() => setProps("play")}><IoGameController className='Avatars'/></button>
             <button className='BlockButtAction' onClick={() => setProps("health")}><GiHealthNormal className='Avatars'/></button>
             <button className='BlockButtAction' onClick={() => setProps("store")}><FaStoreAlt className='Avatars'/></button>
+            <button className='BlockButtAction' onClick={()=> setProps("stylish")}><MdStyle  className='Avatars'/></button>
             <button className='BlockButtAction' onClick={() => setProps("settings")}><IoIosSettings  className='Avatars'/></button>
            </div> 
         </div>

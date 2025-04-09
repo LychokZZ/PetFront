@@ -104,17 +104,8 @@
 }
 .Day{
     position: absolute;
-    background-color: rgba(184, 227, 239, 0.5);
     width: 100vw;
     height: 100vh;
-}
-.More{
-    position: absolute;
-    width: 100vw;
-    height: 10vh;
-    margin-top: 95vh;
-    background-color: rgb(103, 153, 194);
-    animation: Sea 10s infinite;
 }
 .Cold{ 
     position: absolute;

@@ -112,7 +112,6 @@ const GreyNight = () => {
 
 const Pogoda = () => {
 const [city, setCity] = useState<string | null>(null);
-const [error, setError] = useState<string | null>(null);
 const [Weather, setWeather] = useState<React.ReactNode>(null)
 const API_KEY = "100514ab4cff4765be0129b8795e8e20";
 const [DataWeather ,setDataWeather] = useState<InterWeather>({
@@ -130,16 +129,16 @@ const ChooseWeather = () => {
 
     if (DataWeather.temp_c >= 10 && DataWeather.cloud < 50 && hour >= 7 && hour <= 17) {
         setWeather(Sunny());
+    }else if ((hour >= 18 || hour < 6) && DataWeather.cloud < 80) {
+        setWeather(MoonNight());
+    }else if ((hour >= 18 || hour < 6) && DataWeather.cloud >= 80) {
+        setWeather(GreyNight());
     }else if(DataWeather.temp_c <15 && DataWeather.cloud > 60 &&  DataWeather.wind_kph >= 12){
         setWeather(ColdDay())
     }else if(DataWeather.cloud > 50 &&  DataWeather.precip_mm >= 0.2 && DataWeather.precip_mm < 0.7){
         setWeather(SmallRain())
     }else if(DataWeather.cloud > 50 &&  DataWeather.precip_mm >= 0.7) {
         setWeather(BigRain())
-    }else if ((hour >= 18 || hour < 6) && DataWeather.cloud < 80) {
-        setWeather(MoonNight());
-    }else if ((hour >= 18 || hour < 6) && DataWeather.cloud >= 80) {
-        setWeather(GreyNight());
     }else if( DataWeather.temp_c >14 && DataWeather.cloud > 50 && DataWeather.wind_kph <= 12 && hour >= 7 && hour <= 17){
         setWeather(SunnNot());
     }else setWeather(Sunny());
@@ -205,7 +204,6 @@ useEffect(() => {
   useEffect(()=>{
     ChooseWeather()
   },[DataWeather])
-
     return (
         <div>
             {Weather}

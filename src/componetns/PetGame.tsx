@@ -13,6 +13,8 @@ import Game from './Actions/Game';
 import MessagePet from './MessagePet';
 import Settings from './Actions/Settings';
 import Pogoda from './Pogoda';
+import Stylish from './Actions/Stylish';
+import BackGround from './Actions/BackGrond';
 
 interface PetHub {
     eat: number;
@@ -45,6 +47,9 @@ interface Pinguine {
 
 const PetGame = () =>{
     const username = localStorage.getItem('PetName')
+    const [Back, setBack] = useState('')
+    const [BackName, setBackName] = useState<string>('')
+    const [Weathe,setWeathe] = useState<boolean | null>(null)
     const [Balance, setBalance] = useState(1000)
     const [Emotion, setEmotion] = useState('')
     const [Status , setStatus] = useState(false)
@@ -71,7 +76,10 @@ const PetGame = () =>{
         lvl: 100,
         store: 0,
     })
-    
+    useEffect(() => {
+        const saved = localStorage.getItem('Weather') === 'true';
+        setWeathe(saved);
+      }, []);
     useEffect(()=>{
         const getProduct = async () => {
             try {
@@ -107,7 +115,7 @@ const PetGame = () =>{
             }
         };
         getProduct();
-    },[])
+    },[username])
 
 
     useEffect(()=>{
@@ -148,7 +156,7 @@ const PetGame = () =>{
             }
         }
         getStan();
-    },[])
+    },[username])
 
     useEffect(()=>{
         setInterval(()=>{
@@ -232,22 +240,33 @@ const PetGame = () =>{
             return setMenu(<Store Balance={Balance} setProductes = {setProductes} product = {Product} CloseWindow= {CloseWindow}/>)
         }else if(element === "settings"){
             return setMenu(<Settings CloseWindow= {CloseWindow}/>)
+        }else if(element === "stylish"){
+            return setMenu(<Stylish setBackName = {setBackName} Seter ={setWeathe} CloseWindow= {CloseWindow}/>)
         }
         
         
     }
     const Emotions = (value:boolean) => {
-        console.log(value)
         setStatus(value)
     }
+    useEffect(()=>{
+        setBack(BackName)
+    },[BackName])
 
     return(
         <div className='petts'>
             <div className='Coolpac'></div>
             <div className='CoolpacTwo'></div>
-            <div className='Pogoda'> 
+            <div className='Pogoda' > <BackGround BackName={Back} /> </div>
+            {Weathe ? 
+                <div className='Pogoda'> 
                     <Pogoda />
-            </div>
+                </div>
+                :
+                <div className='Pogoda'> 
+                </div>
+            }
+            
             <div> {Menu} </div>
             <div className='PetWindow'>
             <HudBar PetHud = {PetHub}/> 

@@ -1,0 +1,386 @@
+/* JAPAN */
+.Styler{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: #303841;
+    width: 20vw;
+    height: 85vh;
+    color: white;
+    border-radius: 0px 15px 15px 0px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+.WeatherStyle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+.ButOn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(196, 224, 196);
+    width: 5vw;
+    height: 5vh;
+    border: none;
+    border-radius: 10px;
+    transition: transform .1s;
+}
+.ButOn:hover{
+    cursor: pointer;
+    transform: scale(1.05)
+}
+.ButOff{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(220, 192, 192);
+    width: 5vw;
+    height: 5vh;
+    border: none;
+    border-radius: 10px;
+    transition: transform .1s;
+}
+.ButOff:hover{
+    cursor: pointer;
+    transform: scale(1.05)
+}
+.Japan{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    margin-top: -425px;
+    margin-left: -20px;
+    z-index: -1;
+}
+.SakuraBack{
+
+}
+.SakuraTree{
+    position: absolute;
+    width: 20vw;
+    height: 20vh;
+    margin: -15vw 0vw 0vw 5vw;
+}
+.SakuraSmallLetterOne{
+    position: absolute;
+    width: 10vw;
+    height: 20vh;
+    background-color: pink;
+    margin: -1vw 0vw 0vw 0vw;
+    border-radius: 150px;
+    transform: rotate(30deg);
+    box-shadow: 5px 5px 15px rgba(74, 73, 73, 0.3);
+}
+.SakuraSmallLetterTwo{
+    position: absolute;
+    width: 10vw;
+    height: 20vh;
+    background-color: pink;
+    margin: 1vw 0vw 0vw 10vw;
+    border-radius: 150px;
+    transform: rotate(30deg);
+    box-shadow: 5px 5px 15px rgba(74, 73, 73, 0.3);
+}
+.SakuraSmallLetterThree{
+    position: absolute;
+    width: 10vw;
+    height: 20vh;
+    background-color: rgb(240, 181, 191);
+    margin: -2vw 0vw 0vw 6vw;
+    border-radius: 150px;
+    transform: rotate(100deg);
+    box-shadow: 5px 5px 15px rgba(74, 73, 73, 0.3);
+}
+.SakuraSmallLetterFour{
+    position: absolute;
+    width: 10vw;
+    height: 20vh;
+    background-color: pink;
+    margin: 0vw 0vw 0vw 5vw;
+    border-radius: 150px;
+    transform: rotate(30deg);
+    
+    
+}
+.SakuraLetter{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 20px solid black;
+    border-color: rgb(91, 81, 65) transparent transparent transparent;
+    border-radius: 30%;
+    margin-left: 12vw;
+    margin-top: -10vh;
+    transform: rotate(290deg);
+    z-index: -1;
+}
+.SakuraGround{
+    width: 23vw;
+    height: 90vh;
+    border-radius: 150px 150px 0px 0px;
+    background-color: rgb(125, 170, 131);
+    margin-top: 60vh;
+    margin-left: 10px;
+}
+.SakrTwo{
+    position: absolute;
+    width: 60vw;
+    height: 50vh;
+    background-color: rgb(234, 178, 188);
+    margin: -90vh 70vw;
+    border-radius: 300px;
+    box-shadow: 5px 5px 15px rgba(74, 73, 73, 0.3);
+}
+.SakrOne{
+    position: absolute;
+    width: 60vw;
+    height: 50vh;
+    background-color: pink;
+    margin: -60vh 80vw;
+    border-radius: 300px;
+    box-shadow: 5px 5px 15px rgba(74, 73, 73, 0.3);
+}
+.SakrGround{
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    border-radius: 400px;
+    margin: 20vh 75vw;
+    background-color: rgb(125, 170, 131);
+}
+.Cloud-container {
+    position: fixed;
+    top: 89vh;
+    left: -35vw;
+    width: 100vw;
+    height: 100vh;
+    overflow: visible;
+    pointer-events: none;
+}
+.Cloud {
+    position: absolute;
+    width: 35vw;
+    height: 15vh;
+    border-radius: 50px;
+    background: rgba(243, 243, 243, 0.7);
+    animation: Swim linear infinite;
+}
+@keyframes Swim {
+    from {
+      transform: translateX(-100vh);
+    }
+    to {
+      transform: translateX(240vh)
+    }
+}
+.Cloud:nth-child(1) { top: 3%; animation-duration: 25s; animation-delay: 1s; }
+.Cloud:nth-child(2) { top: 6%; animation-duration: 25s; animation-delay: 2s; }
+.Cloud:nth-child(3) { top: 4%; animation-duration: 25s; animation-delay: 3s; }
+.Cloud:nth-child(4) { top: 8%; animation-duration: 25s; animation-delay: 4s; }
+.Cloud:nth-child(5) { top: 5%; animation-duration: 25s; animation-delay: 5s; }
+.Cloud:nth-child(6) { top: 10%; animation-duration: 25s; animation-delay: 6s; }
+
+.Cloud:nth-child(7) { top: 3%; animation-duration: 25s; animation-delay: 7s; }
+.Cloud:nth-child(8) { top: 6%; animation-duration: 25s; animation-delay: 8s; }
+.Cloud:nth-child(9) { top: 4%; animation-duration: 25s; animation-delay: 9s; }
+.Cloud:nth-child(10) { top: 8%; animation-duration: 25s; animation-delay: 10s; }
+.Cloud:nth-child(11) { top: 5%; animation-duration: 25s; animation-delay: 11s; }
+.Cloud:nth-child(12) { top: 10%; animation-duration: 25s; animation-delay: 12s; }
+
+.Cloud:nth-child(13) { top: 3%; animation-duration: 25s; animation-delay: 13s; }
+.Cloud:nth-child(14) { top: 6%; animation-duration: 25s; animation-delay: 14s; }
+.Cloud:nth-child(15) { top: 4%; animation-duration: 25s; animation-delay: 15s; }
+.Cloud:nth-child(16) { top: 8%; animation-duration: 25s; animation-delay: 16s; }
+.Cloud:nth-child(17) { top: 5%; animation-duration: 25s; animation-delay: 17s; }
+.Cloud:nth-child(18) { top: 10%; animation-duration: 25s; animation-delay: 18s; }
+
+.Cloud:nth-child(19) { top: 3%; animation-duration: 25s; animation-delay: 19s; }
+.Cloud:nth-child(20) { top: 6%; animation-duration: 25s; animation-delay: 20s; }
+.Cloud:nth-child(21) { top: 4%; animation-duration: 25s; animation-delay: 21s; }
+.Cloud:nth-child(22) { top: 8%; animation-duration: 25s; animation-delay: 22s; }
+.Cloud:nth-child(23) { top: 5%; animation-duration: 25s; animation-delay: 23s; }
+.Cloud:nth-child(24) { top: 10%; animation-duration: 25s; animation-delay: 24s; }
+
+.Sky{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(210, 225, 239);
+    z-index: -1;
+}
+
+.triangle {
+    position: absolute;
+    width: 30px;
+    height: 0px;
+    border-left: 600px solid transparent;
+    border-right: 600px solid transparent;
+    border-bottom: 400px solid #9fc2d9; 
+    z-index: -1 ;
+    margin-left: 25vw;
+    
+}
+.triangle2 {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-left: 600px solid transparent;
+    border-right: 200px solid transparent;
+    border-bottom: 400px solid #6497b8; 
+    z-index: -1 ;
+    margin-left: 25vw;
+}
+.triangle3 {
+    position: absolute;
+    width: 30px;
+    height: 0px;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 50px solid #ffffff; 
+    z-index: -1 ;
+    margin-left: 61.1vw;
+}
+.Mount{
+    position: absolute;
+    background-color: rgb(210, 225, 239, 0.8);
+    width: 100vw;
+    height: 400px;
+    z-index: -1;
+}
+/* CITY*/
+.SkyCity{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(211, 211, 211);
+    z-index: -1;
+}
+
+.HouseOne{
+    top: 20vh;
+    left: 0vw;
+    width: 30vw;
+    height: 80vh;
+    background-color: #303841;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top: 2vh;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.OffWindow{
+    width: 5vw;
+    height: 10vh;
+    background-color: #95a2a9;
+    margin: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+
+}
+.OnWindow{
+    width: 5vw;
+    height: 10vh;
+    background-color: #d5cc86;
+    margin: 10px;
+    box-shadow: 0px 5px 25px rgba(234, 234, 234, 0.3);
+}
+.HouseTwo{
+    top: 40vh;
+    left: 20vw;
+    width: 60vw;
+    height: 80vh;
+    background-color: #3d4753;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding-top: 2vh;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.HouseThree{
+    top: 5vh;
+    left: 75vw;
+    width: 30vw;
+    height: 100vh;
+    background-color: #242b35;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 2vh;
+    padding-left: 1vw;
+    z-index: -1;
+}
+.trianglehouse {
+    position: absolute;
+    width: 30px;
+    height: 0px;
+    border-left: 300px solid transparent;
+    border-right: 300px solid transparent;
+    border-bottom: 400px solid #3d1a20; 
+    margin-left: -10vw;
+    margin-top: -50vh;
+    
+}
+.trianglehousetwo{
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-left: 500px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 400px solid #291010; 
+    margin-left: -3vw;
+    margin-top: -50vh;
+}
+.lite{
+    position: absolute;
+    height: 10px;
+    width: 100vw;
+    background-color: pink;
+    top: 100vh;
+    box-shadow: 5px 0px 85px rgb(226, 169, 227,0.46);
+}
+.BlockText{
+    position: absolute;
+    width: 20vw;
+    height: 10vh;
+    background-color: #242b35;
+    border: solid 3px black ;
+    margin: 16vw 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0px 0px;
+}
+.Text{
+    color: white;
+    font-size: 60px;
+}
+.TrybaOne{
+    position: absolute;
+    width: 0.6vw;
+    height: 80vh;
+    background-color: #636c77;
+    margin-left: 30.5vw;
+    margin-top: 11px;
+    
+}
+.TrybaTwo{
+    position: absolute;
+    width: 0.6vw;
+    height: 80vh;
+    background-color: #636c77;
+    margin-left: -1vw;
+    margin-top: 6px;
+    z-index: -1;
+}
+.SkyOne{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.46);
+}
+/*  */
