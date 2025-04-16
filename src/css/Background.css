@@ -3,8 +3,9 @@
     background-color: rgb(175, 176, 183);
     width: 35vw;
     height: 25vh;
-    margin: -5px;
+    margin: -30px;
     border-radius: 300vh 300vh 0vh 0vh;
+    z-index: -1;
 }
 .PetAndMessage{
     display: flex;
@@ -81,10 +82,10 @@
 @media (max-width: 600px) {
     .Floor{
         display: flex;
-        background-color: rgb(207, 224, 237);
+        background-color: rgb(175, 176, 183);
         width: 90vw;
         height: 20vh;
-        margin: 0px;
+        margin: -15px;
         border-radius: 300vh 300vh 0vh 0vh;
     }
     .PetAndMessage{

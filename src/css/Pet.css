@@ -1,8 +1,9 @@
 .StylePet{
-    width: 15vw;
+    width: 10vw;
+    margin-top: 5vh;
 }
 @media (max-width: 600px) {
     .StylePet{
-        width: 25vw;
+        width: 20vw;
     }
 }

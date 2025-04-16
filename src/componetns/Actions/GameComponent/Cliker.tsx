@@ -20,7 +20,7 @@ const Cliker: React.FC<Props> = ({Tap , Balanc , taps}) =>{
                     </div>
                     <div>
                         <div className="ClickBut" onClick={()=> Tap()}>
-                            <img className='GamePet' src={"Animals/pngwing.png"} alt="Miha" />
+                            <img className='GamePet' src={"Animals/Senior.png"} alt="Miha" />
                         </div>
                     </div>
                     <div></div>

@@ -41,8 +41,9 @@ interface Product {
 };
 
 interface Pinguine {
-    Play: string;
-    Sleep: string
+    Small: string
+    Midlle: string
+    Senior: string
 }
 
 const PetGame = () =>{
@@ -55,8 +56,9 @@ const PetGame = () =>{
     const [Status , setStatus] = useState(false)
     const [Style,setStyle] = useState<string | null>('')
     const [Ping,setPing] = useState<Pinguine>({
-        Play: 'Animals/pngwing.png',
-        Sleep: 'Animals/sleepPing.png'
+        Small: 'Animals/Smalli.png',
+        Midlle: 'Animals/Midlle.png',
+        Senior: 'Animals/Senior.png'
     })
     const [Product, setProduct] = useState<Product>({
         rice: {name: "rice" , count: 0 , price: 25},
@@ -301,7 +303,7 @@ const PetGame = () =>{
                 <div className='moon'></div>
                 <div className="PetAndMessage">
                     <div className={Emotion}>
-                        <Pet Play = {Ping.Play} Sleep= {Ping.Sleep} Status={Status} />
+                        <Pet Ping = {Ping} Age={PetHub.lvl } Status = {Status} />
                         {Status ? <div></div>: <MessagePet petHub = {PetHub}/> }
                     </div>
                     

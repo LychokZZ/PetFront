@@ -12,7 +12,7 @@ interface Busine {
     Plant: number
 }
 interface Props{
-    setBusin: (element: keyof Busine,value: number) => void;
+    setBusin: (element: keyof Busine,value: number, price: number) => void;
     Balanc: number
     CashHour: number
     Businer: Busine
@@ -30,22 +30,22 @@ const Invest: React.FC<Props> = ({setBusin , Balanc ,CashHour,Businer }) => {
                     <div className="InvestMenu">
                         <h4 className="InvetName"><FaStoreAlt className="InvestIcons"/> Market </h4>
                         <div className="InvestHave">You have : {Businer.Market}</div>
-                        <button className="InvestBut" onClick={()=>setBusin("Market" , 1)}>Купити</button>
+                        <button className="InvestBut" onClick={()=>setBusin("Market" , 1 , 5000)}> Купити  5000 $</button>
                     </div>
                     <div className="InvestMenu">
                         <h4 className="InvetName"><MdOutlineLocalConvenienceStore className="InvestIcons"/> Small business </h4>
                         <div className="InvestHave">You have : {Businer.Small}</div>
-                        <button className="InvestBut" onClick={()=>setBusin("Small" , 1)} >Купити</button>
+                        <button className="InvestBut" onClick={()=>setBusin("Small" , 1 , 10000)} >Купити 10000 $</button>
                     </div>
                     <div className="InvestMenu">
                         <h4 className="InvetName"><FaOilWell className="InvestIcons"/> Oil pumping </h4>
                         <div className="InvestHave">You have : {Businer.Pump} </div>
-                        <button className="InvestBut" onClick={()=>setBusin("Pump" , 1)}>Купити</button>
+                        <button className="InvestBut" onClick={()=>setBusin("Pump" , 1 , 25000)}>Купити  25000 $</button>
                     </div>
                     <div className="InvestMenu">
                         <h4 className="InvetName"><GiNuclearPlant className="InvestIcons"/> Nuclear plant </h4>
                         <div className="InvestHave">You have : {Businer.Plant}</div>
-                        <button className="InvestBut" onClick={()=>setBusin("Plant" , 1)}>Купити</button>
+                        <button className="InvestBut" onClick={()=>setBusin("Plant" , 1 , 50000)}>Купити  50000 $</button>
                     </div>
                 </div>
                 <div></div>

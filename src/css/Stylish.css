@@ -9,6 +9,7 @@
     border-radius: 0px 15px 15px 0px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
 }
+
 .WeatherStyle{
     display: flex;
     justify-content: space-between;
@@ -22,6 +23,7 @@
     align-items: center;
     margin: 20px;
 }
+
 .JapanBut{
     width: 90%;
     height: 5vh;
@@ -113,7 +115,42 @@
     cursor: pointer;
     transform: scale(1.05)
 }
-
+@media (max-width: 600px) {
+    .ButOn{
+        width: 10vw;
+        height: 5vh;
+    }
+    .ButOff{
+        width: 10vw;
+        height: 5vh;
+    }
+    .Styler{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        position: absolute;
+        background-color: #303841;
+        width: 60vw;
+        height: 50vh;
+        color: white;
+        margin-top: -35vh;
+        border-radius: 0px 15px 15px 0px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    }
+    .WeatherStyle{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: -50px 20px 0px 20px;
+    }
+    .WeatherStyleSec{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: -50px 0px 0px 0px;
+    }
+}
 /* JAPAN */
 .Japan{
     position: absolute;
@@ -173,6 +210,50 @@
     
     
 }
+
+@media (max-width: 600px) {
+    .SakuraSmallLetterOne{
+        position: absolute;
+        width: 20vw;
+        height: 10vh;
+        background-color: pink;
+        margin:  -13vw 0vw 0vw -2vw;
+        border-radius: 150px;
+        transform: rotate(30deg);
+        box-shadow: 5px 5px 15px rgba(74, 73, 73, 0.3);
+    }
+    .SakuraSmallLetterTwo{
+        position: absolute;
+        width: 20vw;
+        height: 10vh;
+        background-color: pink;
+        margin:  -12vw 0vw 0vw 12vw;
+        border-radius: 150px;
+        transform: rotate(30deg);
+        box-shadow: 5px 5px 15px rgba(74, 73, 73, 0.3);
+    }
+    .SakuraSmallLetterThree{
+        position: absolute;
+        width: 20vw;
+        height: 10vh;
+        background-color: rgb(240, 181, 191);
+        margin: -15vw 0vw 0vw 7vw;
+        border-radius: 150px;
+        transform: rotate(100deg);
+        box-shadow: 5px 5px 15px rgba(74, 73, 73, 0.3);
+    }
+    .SakuraSmallLetterFour{
+        position: absolute;
+        width: 20vw;
+        height: 10vh;
+        background-color: pink;
+        margin: -12vw 0vw 0vw 5vw;
+        border-radius: 150px;
+        transform: rotate(30deg);
+        
+        
+    }
+}
 .SakuraLetter{
     position: absolute;
     width: 100px;
@@ -219,6 +300,18 @@
     margin: 20vh 75vw;
     background-color: rgb(125, 170, 131);
 }
+@media (max-width: 600px) {
+    .SakrOne{
+        position: absolute;
+        width: 60vw;
+        height: 30vh;
+        background-color: pink;
+        margin: -60vh 80vw;
+        border-radius: 300px;
+        box-shadow: 5px 5px 15px rgba(74, 73, 73, 0.3);
+    }
+}
+
 .Cloud-container {
     position: fixed;
     top: 89vh;
@@ -281,7 +374,29 @@
     background-color: rgb(210, 225, 239);
     z-index: -1;
 }
-
+@media (max-width: 600px) {
+    .triangle {
+        position: absolute;
+        width: 20px;
+        height: 0px;
+        border-left: 600px solid transparent;
+        border-right: 600px solid transparent;
+        border-bottom: 400px solid #9fc2d9; 
+        margin: -20vh 0vh 0vh 0vh;
+        
+        
+    }
+    .triangle3 {
+        position: absolute;
+        width: 30px;
+        height: 0px;
+        border-left: 80px solid transparent;
+        border-right: 80px solid transparent;
+        border-bottom: 50px solid #ffffff; 
+        z-index: -1 ;
+        margin-top: 61.1vw;
+    }
+}
 .triangle {
     position: absolute;
     width: 30px;
@@ -320,6 +435,7 @@
     height: 400px;
     z-index: -1;
 }
+
 /* CITY*/
 .SkyCity{
 
@@ -360,6 +476,16 @@
     margin: 10px;
     box-shadow: 0px 5px 25px rgba(234, 234, 234, 0.3);
 }
+@media (max-width: 600px) {
+    .OnWindow{
+        height: 7vh;
+        width: 8vw;
+    }
+    .OffWindow{
+        height: 7vh;
+        width: 8vw;
+    }
+}
 .HouseTwo{
     top: 40vh;
     left: 20vw;
@@ -384,6 +510,45 @@
     padding-top: 2vh;
     padding-left: 1vw;
     z-index: -1;
+}
+@media (max-width: 600px) {
+    .HouseTwo{
+        top: 60vh;
+        left: 20vw;
+        width: 90vw;
+        height: 40vh;
+        background-color: #3d4753;
+        position: absolute;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        padding-top: 2vh;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    .HouseThree{
+        top: 25vh;
+        left: 75vw;
+        width: 30vw;
+        height: 70vh;
+        background-color: #242b35;
+        position: absolute;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-top: 2vh;
+        padding-left: 1vw;
+        z-index: -1;
+    }
+    .HouseOne{
+        top: 20vh;
+        left: -20vw;
+        width: 60vw;
+        height: 80vh;
+        background-color: #303841;
+        position: absolute;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding-top: 2vh;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    }
 }
 .trianglehouse {
     position: absolute;
@@ -430,23 +595,15 @@
     color: white;
     font-size: 60px;
 }
-.TrybaOne{
-    position: absolute;
-    width: 0.6vw;
-    height: 80vh;
-    background-color: #636c77;
-    margin-left: 30.5vw;
-    margin-top: 11px;
-    
-}
-.TrybaTwo{
-    position: absolute;
-    width: 0.6vw;
-    height: 80vh;
-    background-color: #636c77;
-    margin-left: -1vw;
-    margin-top: 6px;
-    z-index: -1;
+@media (max-width: 600px) {
+    .BlockText{
+        top: 42vh;
+        width: 30vw
+    }
+    .Text{
+        color: white;
+        font-size: 30px;
+    }
 }
 .SkyOne{
     width: 100vw;
@@ -482,6 +639,25 @@
 .wall:nth-child(even){
     margin-left: -2vw;
 }
+@media (max-width:600px) {
+    .Brick{
+        width: 12vw;
+        height: 3vh;
+        background-color: #989898;
+        margin: 1px;
+        
+    }
+    .wall:nth-child(odd){
+        margin-left: -4vw;
+    }
+    .wall{
+        display: grid;
+        padding: 2vw;
+    }
+    .wall:nth-child(even){
+        margin-left: -4vw;
+    }
+}
 .TrainChuh{
     top: 57vh;
     position: absolute;
@@ -500,16 +676,7 @@
     position: absolute;
     left: 63vw;
 }
-.Base{
-    position: absolute;
-    top: 215px;
-    background-color: #3d3d3d;
-    width: 60vw;
-    height: 30vh;
-    border-radius: 50px 300px 0px 50px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 
-}
 .ironline{
     position: absolute;
     top: 145px;
@@ -535,6 +702,16 @@
     border: solid 1px black;
     border-radius: 15px;
 }
+.Base{
+    position: absolute;
+    top: 215px;
+    background-color: #3d3d3d;
+    width: 60vw;
+    height: 30vh;
+    border-radius: 50px 300px 0px 50px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+
+}
 .TrainiPass{
     position: absolute;
     display: grid;
@@ -546,12 +723,96 @@
     border-radius: 50px 50px 50px 50px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
+.outTrain{
+    position: absolute;
+    background-color: #282828;
+    width: 15vw;
+    height: 10vw;
+    border-radius: 50px;
+    margin: 89vh 170vh;
+}
+.AnimationTrain .TrainiPass:nth-child(5) {
+    margin-left: -10vw;
+}
 .AnimationTrain .TrainiPass:nth-child(6) {
     margin-left: -64vw;
 }
 .AnimationTrain .TrainiPass:nth-child(7) {
     margin-left: -128vw;
 }
+@media (max-width: 600px) {
+    .TrainVagon{
+        position: absolute;
+        left: 90vw;
+    }
+    .Base{
+        position: absolute;
+        top: 32vh;
+        background-color: #3d3d3d;
+        width: 80vw;
+        height: 25vh;
+        border-radius: 50px 300px 0px 50px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    
+    }
+    .ironlinepass{
+        position: absolute;
+        top: 145px;
+        width: 80vw;
+        height: 1vh;
+        background-color: #95a2a9; 
+    }
+    .TrainiPass{
+        position: absolute;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        top: 32vh;
+        background-color: #3d3d3d;
+        width: 80vw;
+        height: 25vh;
+        border-radius: 50px 50px 50px 50px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    .outTrain{
+        position: absolute;
+        background-color: #282828;
+        width: 45vw;
+        height: 10vw;
+        border-radius: 50px;
+        margin: 89vh 170vh;
+    }
+    .AnimationTrain .Connnect:nth-child(1) {
+        width: 10vw;
+        margin-left: 80vw;
+        top: 0vh;
+    }
+    .AnimationTrain .Connnect:nth-child(2) {
+        position: absolute;
+        width: 30vw;
+        left: 0vw;
+        top: 0vh;
+    }
+    .AnimationTrain .Connnect:nth-child(3) {
+        position: absolute;
+        width: 20vw;
+        left: 0vw;
+        top: 100vh;
+    }
+    .AnimationTrain .Connnect:nth-child(4) {
+        width: 30vw;
+        left: -163vw;
+        top: 0vh;
+    }
+    .AnimationTrain .TrainiPass:nth-child(6) {
+        margin-left: -90vw;
+    }
+    .AnimationTrain .TrainiPass:nth-child(7) {
+        margin-left: -185vw;
+    }
+    
+}
+
+
 
 .Connnect{
     position: absolute;
@@ -581,14 +842,6 @@
     to {
         transform: translateX(400vw);
     }
-}
-.outTrain{
-    position: absolute;
-    background-color: #282828;
-    width: 15vw;
-    height: 10vw;
-    border-radius: 50px;
-    margin: 89vh 170vh;
 }
 
 .MountOne{
@@ -689,6 +942,65 @@
     transform: scale(0.8) rotate(-30deg);
     z-index: -1;
 }
-.blur{
-
+@media (max-width: 600px) {
+    .GrenLessOne{
+        position: absolute;
+        width: 10vw;
+        height: 5vh;
+        background-color: #94d19d; 
+        border-radius: 50px;
+        transform: rotate(12deg);
+        margin: 32vh 46vw;
+        z-index: -1;
+    }
+    .GrenLessTwo{
+        position: absolute;
+        width: 10vw;
+        height: 5vh;
+        background-color: #94d19d; 
+        border-radius: 50px;
+        transform: rotate(8deg);
+        margin: 32vh 53vw;
+        z-index: -1;
+    }
+    .GrenLessThree{
+        position: absolute;
+        width: 10vw;
+        height: 5vh;
+        background-color: #94d19d; 
+        border-radius: 50px;
+        transform: rotate(8deg);
+        margin: 32vh 49vw;
+        z-index: -1;
+    }
+    .GrenLessFour{
+        position: absolute;
+        width: 10vw;
+        height: 5vh;
+        background-color: #5d8e64; 
+        border-radius: 50px;
+        transform: rotate(100deg);
+        margin: 31vh 49.5vw;
+        z-index: -1;
+    }
+    .TreeWood{
+        position: absolute;
+        width: 2vw;
+        height: 25vh;
+        background-color: #96766f;
+        margin: 70vw 50vw;
+        z-index: -1;
+        transform: rotate(10deg);
+    }
+    .MountOne{
+        position: absolute;
+        width: 60vw;
+        height: 60vh;
+        background-color: rgb(125, 170, 131); 
+        border-radius: 0px 600px 0px 0px;
+        top: 20vh;
+        left: -30vw;
+        z-index: -1;
+        transform: rotate(20deg);
+    }
 }

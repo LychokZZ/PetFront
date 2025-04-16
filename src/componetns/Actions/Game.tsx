@@ -140,11 +140,15 @@ const Game: React.FC<Props> = ({Balance , setBalances ,CloseWindow}) => {
         };
     }, [Busines,username]);
 
-    const setBusin =( element: keyof Busine, number:number) =>{
-        setBusines((prev)=>({
-            ...prev,
-            [element]: prev[element] + number
-        }))
+    const setBusin =( element: keyof Busine, number:number , price: number  )  =>{
+        if(Balanc >= price){
+            setBusines((prev)=>({
+                ...prev,
+                [element]: prev[element] + number
+            }))
+            setBalanc((prev)=>prev - price)
+        }else alert("No cash!!")
+            
     }
     return (
         <div className="GameWindow">

@@ -71,7 +71,7 @@
         flex-direction: column;
         background-color: #303841;
         width: 90vw;
-        height: 50vh;
+        height: 65vh;
         color: white;
         padding: 5px;
         border-radius: 0px 15px 15px 0px;
@@ -133,7 +133,7 @@
     justify-content: space-between;
 }
 .InvestBut{
-    width: 8vw;
+    width: 7vw;
     height: 5vh;
     border-radius: 10px;
     border: none;
@@ -181,4 +181,61 @@
     transform: scale(1.05);
     background-color: #6f757a;
     cursor: pointer;
+}
+@media (max-width: 600px) {
+
+    .ButChoose{
+    width: 15vw;
+    height: 5vh;
+    border-radius: 10px;
+    border: none;
+    background-color: #3f444a;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    transition: transform .1s;
+    }
+    .InvestMenu{
+        display: grid;
+        grid-template-columns:  1fr 1fr 1fr;
+        width: 80vw;
+        margin-left: 5vw;
+        margin-top: 2vh;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .InvestBut{
+        width: 20vw;
+        height: 5vh;
+        border-radius: 10px;
+        border: none;
+        background-color: #3f454a;
+        color: white;
+        font-size: 15px;
+        font-weight: 600;
+        transition: transform .1s;
+    }
+    .InvestBut:hover{
+        transform: scale(1.05);
+        background-color: #6f757a;
+        cursor: pointer;
+    }
+    .InvestHave{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #4d5459;
+        width: 26vw;
+        height: 5vh;
+        border-radius: 10px;
+    }
+    .InvetName{
+        display: flex;
+        align-items: center;
+    }
+    .InvestIcons{
+        width: 5vw;
+        height: 5vw;
+        margin-right: 10px;
+    }
 }
