@@ -55,7 +55,7 @@
     margin: -5vh;
     background-color: rgb(135, 135, 135);
     border-radius: 100vw;
-    box-shadow: 0 0 20px rgba(159, 159, 159, 0.8);
+    box-shadow: 0 0 40px rgba(34, 34, 34, 0.5);
 }
 .Moon-circule1{
     position: absolute;
@@ -92,7 +92,7 @@
 }
 .GreyNight{
     position: absolute;
-    background-color: rgba(41, 41, 43, 0.9);
+    background-color: rgba(51, 51, 55, 0.7);
     width: 100vw;
     height: 100vh;
 }

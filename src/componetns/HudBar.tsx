@@ -45,9 +45,10 @@ const HudBar: React.FC<HudBarProps> =({PetHud}) =>{
     },[PetHud])
 
     useEffect(()=>{
-        let l = PetHud.lvl.toString();
+        let b = Math.floor(PetHud.lvl)
+        let l = b.toString();
         let word = l.split('')
-        if(word.length > 5){
+        if(word.length > 3){
             setLvls(word[0] + word[1])
         }else setLvls(word[0])
     },[PetHud])

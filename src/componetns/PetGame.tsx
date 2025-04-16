@@ -53,6 +53,7 @@ const PetGame = () =>{
     const [Balance, setBalance] = useState(1000)
     const [Emotion, setEmotion] = useState('')
     const [Status , setStatus] = useState(false)
+    const [Style,setStyle] = useState<string | null>('')
     const [Ping,setPing] = useState<Pinguine>({
         Play: 'Animals/pngwing.png',
         Sleep: 'Animals/sleepPing.png'
@@ -76,10 +77,37 @@ const PetGame = () =>{
         lvl: 100,
         store: 0,
     })
+    const [Lock,setLock] = useState({
+        Japan: "Lock",
+        City: "Lock",
+        Train: "Lock"
+        
+    })
     useEffect(() => {
         const saved = localStorage.getItem('Weather') === 'true';
         setWeathe(saved);
       }, []);
+    useEffect(() => {
+        const style = localStorage.getItem('Style');
+        setStyle(style);
+    }, []);
+
+    useEffect(()=>{
+        const GetLock = async () =>{
+            const locks = await fetch(`https://petserver-h8xb.onrender.com/auth/getLock?username=${username}`, {
+                method: "GET",
+                headers: { 'Content-Type': 'application/json' }
+            });
+            const data = await locks.json();
+            setLock({
+                Japan: data.Japan,
+                City: data.City,
+                Train: data.Train,
+            })
+        }
+
+        GetLock()        
+    },[])
     useEffect(()=>{
         const getProduct = async () => {
             try {
@@ -115,7 +143,7 @@ const PetGame = () =>{
             }
         };
         getProduct();
-    },[username])
+    },[username,Menu])
 
 
     useEffect(()=>{
@@ -156,7 +184,7 @@ const PetGame = () =>{
             }
         }
         getStan();
-    },[username])
+    },[])
 
     useEffect(()=>{
         setInterval(()=>{
@@ -241,7 +269,7 @@ const PetGame = () =>{
         }else if(element === "settings"){
             return setMenu(<Settings CloseWindow= {CloseWindow}/>)
         }else if(element === "stylish"){
-            return setMenu(<Stylish setBackName = {setBackName} Seter ={setWeathe} CloseWindow= {CloseWindow}/>)
+            return setMenu(<Stylish Lock = {Lock} setLock= {setLock} Balance = {Balance} setBackName = {setBackName} Seter ={setWeathe} CloseWindow= {CloseWindow}/>)
         }
         
         
@@ -252,12 +280,12 @@ const PetGame = () =>{
     useEffect(()=>{
         setBack(BackName)
     },[BackName])
-
+    
     return(
         <div className='petts'>
             <div className='Coolpac'></div>
             <div className='CoolpacTwo'></div>
-            <div className='Pogoda' > <BackGround BackName={Back} /> </div>
+            <div className='Pogoda' > <BackGround BackName={Back} Style= {Style}/> </div>
             {Weathe ? 
                 <div className='Pogoda'> 
                     <Pogoda />

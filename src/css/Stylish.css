@@ -1,4 +1,3 @@
-/* JAPAN */
 .Styler{
     display: flex;
     justify-content: space-around;
@@ -16,6 +15,74 @@
     align-items: center;
     margin: 20px;
 }
+.WeatherStyleSec{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+.JapanBut{
+    width: 90%;
+    height: 5vh;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+    background-color: rgb(242, 198, 206);
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform .1s;
+}
+.JapanBut:hover{
+    transform: scale(1.05)
+}
+.CityBut{
+    width: 90%;
+    height: 5vh;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+    background-color: rgb(181, 187, 231);
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform .1s;
+}
+.CityBut:hover{
+    transform: scale(1.05)
+}
+.TrainBut{
+    width: 90%;
+    height: 5vh;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+    background-color: rgb(204, 245, 209);
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform .1s;
+}
+.TrainBut:hover{
+    transform: scale(1.05)
+}
+.ButBuy{
+    width: 90%;
+    height: 5vh;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+    background-color: rgb(203, 203, 203);
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform .1s;
+}
+.ButBuy:hover{
+    transform: scale(1.05)
+}
+
 .ButOn{
     display: flex;
     justify-content: center;
@@ -46,6 +113,8 @@
     cursor: pointer;
     transform: scale(1.05)
 }
+
+/* JAPAN */
 .Japan{
     position: absolute;
     width: 100vw;
@@ -253,12 +322,13 @@
 }
 /* CITY*/
 .SkyCity{
+
     width: 100vw;
     height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgb(211, 211, 211);
+    background-color: rgb(187, 199, 204);
     z-index: -1;
 }
 
@@ -383,4 +453,242 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.46);
 }
+/* Train */
+.TrainRoad{
+    position: absolute;
+    width: 100vw;
+    height: 50vh;
+    background-color: #282828;
+    top: 60vh;
+    display: flex;
+    flex-direction: row;
+}
+.Brick{
+    width: 4vw;
+    height: 3vh;
+    background-color: #989898;
+    margin: 1px;
+}
+.Brick:nth-child(even){
+    margin-left: 2vw;
+}
+.wall{
+    display: grid;
+    padding: 1vh;
+}
+.wall:nth-child(odd){
+    margin-left: -2vw;
+}
+.wall:nth-child(even){
+    margin-left: -2vw;
+}
+.TrainChuh{
+    top: 57vh;
+    position: absolute;
+    width: 100vw ;
+    height: 3vh;
+    background-color: #96766f;
+    display: flex;
+    justify-content: space-around;
+}
+.Iron{
+    width: 1vh;
+    height: 2vh;
+    background-color: #dddddd;
+}
+.TrainVagon{
+    position: absolute;
+    left: 63vw;
+}
+.Base{
+    position: absolute;
+    top: 215px;
+    background-color: #3d3d3d;
+    width: 60vw;
+    height: 30vh;
+    border-radius: 50px 300px 0px 50px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+
+}
+.ironline{
+    position: absolute;
+    top: 145px;
+    width: 58.9vw;
+    height: 1vh;
+    background-color: #95a2a9;
+    border-radius: 0px 50px 0px 0px;
+}
+.ironlinepass{
+    position: absolute;
+    top: 145px;
+    width: 60vw;
+    height: 1vh;
+    background-color: #95a2a9; 
+}
+.TrainWindow{
+    margin-top: 30px;
+    margin-left: 20px;
+    top: 50px;
+    width: 10vw;
+    height: 10vh;
+    background-color: #c0d8e8;
+    border: solid 1px black;
+    border-radius: 15px;
+}
+.TrainiPass{
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    top: 215px;
+    background-color: #3d3d3d;
+    width: 60vw;
+    height: 30vh;
+    border-radius: 50px 50px 50px 50px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.AnimationTrain .TrainiPass:nth-child(6) {
+    margin-left: -64vw;
+}
+.AnimationTrain .TrainiPass:nth-child(7) {
+    margin-left: -128vw;
+}
+
+.Connnect{
+    position: absolute;
+    width: 5vw;
+    height: 1vh;
+    background-color: black;
+    margin-top: 50vh;
+    margin-left: 58vw;
+    z-index: -1;
+}
+.AnimationTrain .Connnect:nth-child(2){
+    margin-left: -9vh;
+}
+.AnimationTrain .Connnect:nth-child(3){
+    margin-left: -127vh;
+    margin-top: 50vh;
+}
+
+.AnimationTrain{
+    animation: Train 10s linear infinite;
+}
 /*  */
+@keyframes Train {
+    from {
+        transform: translateX(-300vw);
+    }
+    to {
+        transform: translateX(400vw);
+    }
+}
+.outTrain{
+    position: absolute;
+    background-color: #282828;
+    width: 15vw;
+    height: 10vw;
+    border-radius: 50px;
+    margin: 89vh 170vh;
+}
+
+.MountOne{
+    position: absolute;
+    width: 60vw;
+    height: 60vh;
+    background-color: rgb(125, 170, 131); 
+    border-radius: 0px 600px 0px 0px;
+    top: 20vh;
+    left: -20vw;
+    z-index: -1;
+    transform: rotate(20deg);
+}
+.MountTwo{
+    position: absolute;
+    width: 80vw;
+    height: 80vh;
+    background-color: rgb(107, 150, 113); 
+    border-radius: 400px 600px 0px 0px;
+    top: 40vh;
+    left: 15vw;
+    z-index: -1;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.MountThree{
+    position: absolute;
+    width: 80vw;
+    height: 60vh;
+    background-color: rgb(123, 170, 130); 
+    border-radius: 600px 600px 0px 0px;
+    top: 40vh;
+    left: 50vw;
+    z-index: -1;
+    transform: rotate(-20deg);
+}
+.SkyTrain{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(232, 244, 255);
+    z-index: -1;
+}
+.TreeWood{
+    position: absolute;
+    width: 2vw;
+    height: 15vh;
+    background-color: #96766f;
+    margin: 15vw 50vw;
+    z-index: -1;
+    transform: rotate(10deg);
+}
+.GrenLessOne{
+    position: absolute;
+    width: 5vw;
+    height: 12vh;
+    background-color: #94d19d; 
+    border-radius: 50px;
+    transform: rotate(12deg);
+    margin: 13vw 46vw;
+    z-index: -1;
+}
+.GrenLessTwo{
+    position: absolute;
+    width: 5vw;
+    height: 12vh;
+    background-color: #94d19d; 
+    border-radius: 50px;
+    transform: rotate(8deg);
+    margin: 14vw 52vw;
+    z-index: -1;
+}
+.GrenLessThree{
+    position: absolute;
+    width: 6vw;
+    height: 15vh;
+    background-color: #94d19d; 
+    border-radius: 50px;
+    transform: rotate(8deg);
+    margin: 12vw 48.5vw;
+    z-index: -1;
+}
+.GrenLessFour{
+    position: absolute;
+    width: 7vw;
+    height: 16vh;
+    background-color: #5d8e64; 
+    border-radius: 50px;
+    transform: rotate(100deg);
+    margin: 12vw 48vw;
+    z-index: -1;
+}
+.GreenTreeTwo{
+    position: absolute;
+    top: 27vw;
+    left: -4vw;
+    transform: scale(0.8) rotate(-30deg);
+    z-index: -1;
+}
+.blur{
+
+}

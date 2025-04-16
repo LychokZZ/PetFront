@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 interface Back {
     BackName: string
+    Style: string | null
 }
 
 const Japan = () => {
@@ -133,18 +134,448 @@ const City = () => {
     )
 }
 
+const Train = () => {
 
-const BackGround: React.FC<Back> = ({BackName}) => {
-const [Meesto,setMesto] = useState(Japan())
+    return (
+        <div>
+            <div className="SkyTrain"></div>
+            <div className="TrainRoad">
+                    <div className="wall">
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                    </div>
+                    <div className="wall">
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                    </div>
+                    <div className="wall">
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                    </div>
+                    <div className="wall">
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                    </div>
+                    <div className="wall">
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                    </div>
+                    <div className="wall">
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                    </div>
+                    <div className="wall">
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                    </div>
+                    <div className="wall">
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                    </div>
+                    <div className="wall">
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                    </div>
+                    <div className="wall">
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                    </div>
+                    <div className="wall">
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                    </div>
+                    <div className="wall">
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                    </div>
+                    <div className="wall">
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                    </div>
+                    <div className="wall">
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                    </div>
+                    <div className="wall">
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                    </div>
+                    <div className="wall">
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                    </div>
+                    <div className="wall">
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                    </div>
+                    <div className="wall">
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                    </div>
+                    <div className="wall">
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                    </div>
+                    <div className="wall">
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                    </div>
+                    <div className="wall">
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                    </div>
+                    <div className="wall">
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                        <div className="Brick"></div>
+                    </div>
+            </div>
+            <div className="TrainChuh">
+                <div className="Iron"></div>
+                <div className="Iron"></div>
+                <div className="Iron"></div>
+                <div className="Iron"></div>
+                <div className="Iron"></div>
+                <div className="Iron"></div>
+                <div className="Iron"></div>
+                <div className="Iron"></div>
+                <div className="Iron"></div>
+                <div className="Iron"></div>
+            </div>
+            <div className="AnimationTrain">
+                <div className="Connnect"></div>
+                <div className="Connnect"></div>
+                <div className="Connnect"></div>
+                <div className="Connnect"></div>
+                <div className="TrainVagon">
+                    <div className="Base">
+                        <div className="ironline"></div>
+                    </div>
+                </div>
+                <div className="TrainiPass">
+                    <div className="TrainWindow"></div>
+                    <div className="TrainWindow"></div>
+                    <div className="TrainWindow"></div>
+                    <div className="TrainWindow"></div>
+                    <div className="ironlinepass"></div>
+                </div>
+                <div className="TrainiPass">
+                    <div className="TrainWindow"></div>
+                    <div className="TrainWindow"></div>
+                    <div className="TrainWindow"></div>
+                    <div className="TrainWindow"></div>
+                    <div className="ironlinepass"></div>
+                </div>
+                <div className="TrainiPass">
+                    <div className="TrainWindow"></div>
+                    <div className="TrainWindow"></div>
+                    <div className="TrainWindow"></div>
+                    <div className="TrainWindow"></div>
+                    <div className="ironlinepass"></div>
+                </div>
+               
+            </div>
+            <div className="outTrain"></div>
+            <div className="Ground">
+                <div className="GreenTree">
+                    <div className="TreeWood"></div>
+                    <div className="GrenLessOne"></div>
+                    <div className="GrenLessTwo"></div>
+                    <div className="GrenLessFour"></div>
+                    <div className="GrenLessThree"></div>
+                </div>
+                <div className="GreenTreeTwo">
+                    <div className="TreeWood"></div>
+                    <div className="GrenLessOne"></div>
+                    <div className="GrenLessTwo"></div>
+                    <div className="GrenLessFour"></div>
+                    <div className="GrenLessThree"></div>
+                </div>
+                <div className="MountOne"></div>
+                <div className="MountThree"></div>
+                <div className="MountTwo"></div>
+                
+            </div>
+        </div>
+    )
+}
+const Def =() =>{
+    return (
+        <span>
+
+        </span>
+    )
+}
+
+
+const BackGround: React.FC<Back> = ({BackName , Style}) => {
+const [Meesto,setMesto] = useState(Def())
 useEffect(()=>{
     if(BackName === 'Japan'){
         setMesto(Japan())
     }else if(BackName === 'City'){
         setMesto(City())
+    }else if(BackName === 'Train'){
+        setMesto(Train())
+    }else if(BackName === 'Def'){
+        setMesto(Def())
     }
 },[BackName])
+useEffect(()=>{
+    console.log(Style)
+    if(Style === 'Japan'){
+        setMesto(Japan())
+    }else if(Style === 'City'){
+        setMesto(City())
+    }else if(Style === 'Train'){
+        setMesto(Train())
+    }else if(Style === ''){
+        setMesto(Def())
+    }
+},[Style])
     return (
-        <div>
+        <div className="blur">
             {Meesto}
         </div>
     )
